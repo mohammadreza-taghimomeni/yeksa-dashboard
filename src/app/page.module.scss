@@ -110,3 +110,24 @@
     position: relative;
   }
 }
+
+.reportWrapper {
+  background-color: #2a2c74;
+  padding: 4rem !important;
+  color: #ffffff;
+  height: 26rem;
+
+  .reportContent {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    // width: 80%;
+
+    .reportTitle {
+      border-bottom: 2px solid #ff9c2f;
+      padding-bottom: 10px;
+    }
+  }
+}

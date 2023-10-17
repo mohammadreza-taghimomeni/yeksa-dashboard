@@ -278,7 +278,7 @@ const Home = () => {
         <Grid xs={12}>
           <Button variant="contained">
             Go to Press room
-            <ArrowForwardIcon sx={{ height: 10 }} />
+            <ArrowForwardIcon sx={{ height: 14 }} />
           </Button>
         </Grid>
       </Grid>
@@ -372,6 +372,37 @@ const Home = () => {
               <ArrowForwardIcon />
             </Button>
           </div>
+        </Grid>
+      </Grid>
+
+      {/* Integrated Annual Report */}
+      <Grid
+        container
+        xs={12}
+        className={classes.reportWrapper}
+        sx={{ position: "relative" }}
+      >
+        <Grid xs={12} md={6}>
+          <Image src={"/report.png"} alt="report" fill objectFit="" />
+        </Grid>
+
+        <Grid xs={12} md={4} mdOffset={2} className={classes.reportContent}>
+          <Typography
+            variant="h3"
+            sx={{ mb: 2 }}
+            className={classes.reportTitle}
+          >
+            Integrated Annual Report
+          </Typography>
+
+          <Typography variant="body1" sx={{ mb: 3 }}>
+            Discover more about Acerinox in our Integrated Annual report
+          </Typography>
+
+          <Button color="secondary" variant="outlined">
+            See Report
+            <ArrowForwardIcon sx={{ height: 14 }} />
+          </Button>
         </Grid>
       </Grid>
     </Grid>
