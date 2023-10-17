@@ -22,6 +22,32 @@
     position: relative;
     margin-top: 4rem;
     padding: 1rem 3rem !important;
+    display: flex;
+    height: calc(100vh - 4rem);
+    align-items: center;
+
+    .contentImage {
+      width: 30%;
+      height: 40vh;
+      position: relative;
+    }
+
+    .contentInfo {
+      margin-left: 3rem;
+      padding-left: 3rem;
+      position: relative;
+
+      &:before {
+        content: "a";
+        font-size: 0;
+        width: 2px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #ff9c2f;
+        position: absolute;
+      }
+    }
   }
 
   &:after {

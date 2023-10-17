@@ -25,7 +25,43 @@ const Home = () => {
         >
           <source src="/poster.mp4" type="video/mp4" />
         </video>
-        <div className={classes.contentWrapper}>banner is coming here...</div>
+        <div className={classes.contentWrapper}>
+          <div className={classes.contentImage}>
+            <Image src={"/logo.svg"} fill alt="logo" objectFit="contain" />
+          </div>
+
+          <div className={classes.contentInfo}>
+            <Typography
+              variant="h2"
+              fontWeight={"bold"}
+              sx={{ mb: 1 }}
+              color={"secondary"}
+            >
+              LEADERS IN THE MANUFACTURE OF STAINLESS STEEL AND HIGH PERFORMANCE
+              ALLOYS
+            </Typography>
+
+            <Typography
+              variant="h6"
+              fontWeight={"bold"}
+              sx={{ mb: 1 }}
+              color={"secondary"}
+            >
+              We create the most efficient materials for the future, maximising
+              the benefits for a sustainable society and building value for our
+              stakeholders.
+            </Typography>
+
+            <Button
+              size="large"
+              color="secondary"
+              variant="outlined"
+              sx={{ p: 2 }}
+            >
+              <ArrowForwardIcon />
+            </Button>
+          </div>
+        </div>
       </Grid>
 
       {/* Company Section */}
@@ -279,6 +315,7 @@ const Home = () => {
               sx={{ zIndex: 1, p: 1, minWidth: 0 }}
               variant="contained"
               size="small"
+              color="secondary"
             >
               <ArrowForwardIcon />
             </Button>
@@ -304,6 +341,7 @@ const Home = () => {
               sx={{ zIndex: 1, p: 1, minWidth: 0 }}
               variant="contained"
               size="small"
+              color="secondary"
             >
               <ArrowForwardIcon />
             </Button>
@@ -329,6 +367,7 @@ const Home = () => {
               sx={{ zIndex: 1, p: 1, minWidth: 0 }}
               variant="contained"
               size="small"
+              color="secondary"
             >
               <ArrowForwardIcon />
             </Button>
