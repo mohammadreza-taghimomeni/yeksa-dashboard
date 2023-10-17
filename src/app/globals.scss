@@ -5,13 +5,18 @@ body {
   .nav-wrapper {
     position: fixed;
     top: 0;
-    // background-color: transparent;
+    background-color: transparent;
     height: 4rem;
+    z-index: 99;
+
+    .MuiToolbar-root {
+      padding: 0 3rem !important;
+    }
   }
 
   .main-wrapper {
     width: 100vw;
-    margin-top: 4rem;
+    // margin-top: 4rem;
   }
 
   .site-wrapper {

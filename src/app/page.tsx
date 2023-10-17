@@ -15,7 +15,17 @@ const Home = () => {
   return (
     <Grid container className={classes.main}>
       <Grid xs={12} className={classes.bannerWrapper}>
-        banner is coming here...
+        <video
+          className={classes.videoWrapper}
+          loop
+          muted
+          autoPlay
+          preload="metadata"
+          poster="/poster.png"
+        >
+          <source src="/poster.mp4" type="video/mp4" />
+        </video>
+        <div className={classes.contentWrapper}>banner is coming here...</div>
       </Grid>
 
       {/* Company Section */}
@@ -265,7 +275,11 @@ const Home = () => {
             >
               Applications
             </Typography>
-            <Button sx={{ zIndex: 1 }} variant="outlined">
+            <Button
+              sx={{ zIndex: 1, p: 1, minWidth: 0 }}
+              variant="contained"
+              size="small"
+            >
               <ArrowForwardIcon />
             </Button>
           </div>
@@ -286,7 +300,11 @@ const Home = () => {
             >
               Applications
             </Typography>
-            <Button sx={{ zIndex: 1 }} variant="outlined">
+            <Button
+              sx={{ zIndex: 1, p: 1, minWidth: 0 }}
+              variant="contained"
+              size="small"
+            >
               <ArrowForwardIcon />
             </Button>
           </div>
@@ -307,7 +325,11 @@ const Home = () => {
             >
               Applications
             </Typography>
-            <Button sx={{ zIndex: 1 }} variant="outlined">
+            <Button
+              sx={{ zIndex: 1, p: 1, minWidth: 0 }}
+              variant="contained"
+              size="small"
+            >
               <ArrowForwardIcon />
             </Button>
           </div>
