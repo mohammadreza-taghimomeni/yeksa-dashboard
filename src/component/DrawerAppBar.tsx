@@ -35,7 +35,7 @@ export default function DrawerAppBar(props: Props) {
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => handleNavigation(e));
-  }, []);
+  }, [windowProps]);
 
   const handleNavigation = (e: any) => {
     const window = e.currentTarget;
@@ -69,7 +69,7 @@ export default function DrawerAppBar(props: Props) {
   );
 
   const container =
-    window !== undefined
+    windowProps !== undefined
       ? () => {
           if (windowProps) {
             return windowProps().document.body;

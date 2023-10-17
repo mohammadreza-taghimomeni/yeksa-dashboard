@@ -154,8 +154,8 @@ const Home = () => {
                 sx={{
                   mb: 2,
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "2",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
@@ -168,8 +168,8 @@ const Home = () => {
                 color="text.secondary"
                 sx={{
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "3",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
@@ -199,8 +199,8 @@ const Home = () => {
                 sx={{
                   mb: 2,
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "2",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
@@ -213,8 +213,8 @@ const Home = () => {
                 color="text.secondary"
                 sx={{
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "3",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
@@ -244,8 +244,8 @@ const Home = () => {
                 sx={{
                   mb: 2,
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "2",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
@@ -258,8 +258,8 @@ const Home = () => {
                 color="text.secondary"
                 sx={{
                   display: "-webkit-box",
-                  "-webkit-line-clamp": "3",
-                  "-webkit-box-orient": "vertical",
+                  WebkitLineClamp: "3",
+                  WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                 }}
