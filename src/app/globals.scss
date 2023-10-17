@@ -1,0 +1,16 @@
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    // background-color: transparent;
+    height: 4rem;
+  }
+
+  .main-wrapper {
+    width: 100vw;
+    margin-top: 4rem;
+  }
+}
