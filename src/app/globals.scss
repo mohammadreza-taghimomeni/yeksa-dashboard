@@ -12,6 +12,11 @@ body {
     .MuiToolbar-root {
       padding: 0 3rem !important;
     }
+
+    &.navigation {
+      background-color: #fff;
+      color: #181818 !important;
+    }
   }
 
   .main-wrapper {

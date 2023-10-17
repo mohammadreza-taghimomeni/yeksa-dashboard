@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -29,8 +29,22 @@ const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 export default function DrawerAppBar(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { window: windowProps } = props;
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [navClass, setNavClass] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => handleNavigation(e));
+  }, []);
+
+  const handleNavigation = (e: any) => {
+    const window = e.currentTarget;
+    if (window.scrollY == 0) {
+      setNavClass("");
+    } else {
+      setNavClass("navigation");
+    }
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -39,7 +53,7 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        ACERINOX
       </Typography>
       <Divider />
       <List>
@@ -55,12 +69,20 @@ export default function DrawerAppBar(props: Props) {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    window !== undefined
+      ? () => {
+          if (windowProps) {
+            return windowProps().document.body;
+          } else {
+            return null;
+          }
+        }
+      : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" className="nav-wrapper">
+      <AppBar component="nav" className={"nav-wrapper " + navClass}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -84,7 +106,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: navClass ? "#181818" : "#fff" }}>
                 {item}
               </Button>
             ))}
